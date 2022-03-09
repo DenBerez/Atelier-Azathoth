@@ -1,4 +1,5 @@
 const express = require("express");
+require('newrelic');
 const pool = require("./database/index.js");
 
 const app = express();
