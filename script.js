@@ -7,6 +7,6 @@ export const options = {
 };
 
 export default function () {
-  http.get('https://test.k6.io');
+  http.get('http://54.219.105.222:3000/products');
   sleep(1);
 }

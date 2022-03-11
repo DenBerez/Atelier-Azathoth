@@ -40,3 +40,9 @@ CREATE TABLE photos (
   thumbnail_url text,
   FOREIGN KEY (styleId) REFERENCES styles (id)
 );
+
+COPY product(id, name, slogan, description, category, default_price) FROM '/home/ubuntu/sdc/csvs/product.csv' DELIMITER ',' NULL AS 'null' CSV HEADER;
+COPY styles(id, productId, name, sale_price, original_price, default_style) FROM '/home/ubuntu/sdc/csvs/styles.csv' DELIMITER ',' NULL AS 'null' CSV HEADER;
+COPY skus(id, styleId, size, quantity) FROM '/home/ubuntu/sdc/csvs/skus.csv' DELIMITER ',' NULL AS 'null' CSV HEADER;
+COPY features(id, product_id, feature, value) FROM '/home/ubuntu/sdc/csvs/features.csv' DELIMITER ',' NULL AS 'null' CSV HEADER;
+COPY photos(id, styleId, url, thumbnail_url) FROM '/home/ubuntu/sdc/csvs/photos.csv' DELIMITER ',' NULL AS 'null' CSV HEADER;
