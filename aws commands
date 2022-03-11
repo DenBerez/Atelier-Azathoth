@@ -1,0 +1,8 @@
+chmod 400 SDC.pem
+get ssh command from aws
+audo apt-get update && sudo apt-get upgrade -y
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo apt-get install git
+sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000
+git clone https://github.com/DenBerez/sdc.git
