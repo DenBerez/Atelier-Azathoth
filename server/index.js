@@ -63,8 +63,8 @@ app.get('/products/:product_id/styles', async (req, res) => {
     };
 });
 
-app.get('/loaderio-2d5e65c83e2239d9342eeb3c4192a35d', (req, res) => {
-  res.send('loaderio-2d5e65c83e2239d9342eeb3c4192a35d');
+app.get('/loaderio-65ab7869a68b3a7073a40127fdab5c9f', (req, res) => {
+  res.send('loaderio-65ab7869a68b3a7073a40127fdab5c9f');
 });
 
 app.listen(3000);
