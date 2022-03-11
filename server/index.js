@@ -8,7 +8,7 @@ const app = express();
 app.get('/products', async (req, res) => {
   try {
     // const client = await pool.connect();
-    const request = await client.query(
+    const request = await pool.query(
       `SELECT * FROM product LIMIT 10;`
     );
     res.send(request.rows);
@@ -21,7 +21,7 @@ app.get('/products', async (req, res) => {
 app.get('/products/:product_id', async (req, res) => {
   try {
     // const client = await pool.connect();
-    const request = await client.query(
+    const request = await pool.query(
       `SELECT * FROM product p INNER JOIN features f ON (f.product_id = $1) WHERE p.id = $1;`, [req.params.product_id]
     );
     res.send(request.rows);
@@ -34,7 +34,7 @@ app.get('/products/:product_id', async (req, res) => {
 app.get('/products/:product_id/styles', async (req, res) => {
     try {
       // const client = await pool.connect();
-      const request = await client.query(
+      const request = await pool.query(
         `SELECT json_build_object(
           'product_id',
           (SELECT id FROM product WHERE id = $1),
