@@ -9,21 +9,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DenBerez/sdc.git"
+    "url": "git+https://github.com/DenBerez/Atelier-Azathoth.git"
   },
   "author": "DenBerez",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DenBerez/sdc/issues"
+    "url": "https://github.com/DenBerez/Atelier-Azathoth/issues"
   },
-  "homepage": "https://github.com/DenBerez/sdc#readme",
+  "homepage": "https://github.com/DenBerez/Atelier-Azathoth#readme",
   "dependencies": {
     "axios": "^0.26.0",
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "forever": "^0.14.2",
     "k6": "^0.0.0",
     "newrelic": "^8.8.0",
-    "node": "^17.5.0",
+    "node": "^17.7.1",
     "nodemon": "^2.0.15",
     "pg": "^8.7.3"
   }

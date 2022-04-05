@@ -1,31 +1,11 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-
-# Diagnostic reports (https://nodejs.org/api/report.html)
-report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.locklist
-
-# Dependency directories
-node_modules/
-
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
-
-# dotenv environment variables file
-.env
-.env.test
-
-
+node_modules
 *.csv
 package-lock.json
 *.pem
+aComms
+pComms
+README.md
+script.js
+loader.txt
+newrelic_agent.log
+.env

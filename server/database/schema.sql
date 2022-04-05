@@ -46,3 +46,7 @@ COPY styles(id, productId, name, sale_price, original_price, default_style) FROM
 COPY skus(id, styleId, size, quantity) FROM '/home/ubuntu/sdc/csvs/skus.csv' DELIMITER ',' NULL AS 'null' CSV HEADER;
 COPY features(id, product_id, feature, value) FROM '/home/ubuntu/sdc/csvs/features.csv' DELIMITER ',' NULL AS 'null' CSV HEADER;
 COPY photos(id, styleId, url, thumbnail_url) FROM '/home/ubuntu/sdc/csvs/photos.csv' DELIMITER ',' NULL AS 'null' CSV HEADER;
+
+CREATE INDEX featuresIndex ON features(product_id);
+CREATE INDEX stylesIndex ON styles(productId);
+CREATE INDEX photosIndex ON photos(styleId);
